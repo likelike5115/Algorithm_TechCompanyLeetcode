@@ -1,5 +1,5 @@
 /**
- * @Description 这是一道基于快速排序的题  快排： https://github.com/likelike5115/Sort/blob/main/src/QuickSort.java
+ * @Description 经典荷兰国旗问题 这是一道基于快速排序的题  快排： https://github.com/likelike5115/Sort/blob/main/src/QuickSort.java
  * @Author
  */
 public class SortColors_S1_75 {
@@ -14,7 +14,7 @@ public class SortColors_S1_75 {
             if(nums[i] == 0){
                 swap(nums, l++, i++);
             }else if(nums[i] == 2){
-                swap(nums, r--, i);
+                swap(nums, r--, i); //关键在于这里i 不能 ++
             }else{
                 i++;
             }
@@ -24,7 +24,7 @@ public class SortColors_S1_75 {
             System.out.println("");
         }
     }
-    public void swap(int[] num, int l, int r){
+    public void swap(int[] num, int l, int r){   //还可以优化到不用swap只用指针
         int temp = num[l];
         num[l] = num[r];
         num[r] = temp;
