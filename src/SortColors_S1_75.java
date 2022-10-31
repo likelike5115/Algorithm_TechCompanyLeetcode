@@ -1,5 +1,6 @@
 /**
  * @Description 经典荷兰国旗问题 这是一道基于快速排序的题  快排： https://github.com/likelike5115/Sort/blob/main/src/QuickSort.java
+ * 还有一个解： 遍历一次数组统计0，1，2出现次数，然后再遍历一次数组赋值
  * @Author
  */
 public class SortColors_S1_75 {
@@ -18,10 +19,6 @@ public class SortColors_S1_75 {
             }else{
                 i++;
             }
-            for(int n : nums){
-                System.out.print(n);
-            }
-            System.out.println("");
         }
     }
     public void swap(int[] num, int l, int r){   //还可以优化到不用swap只用指针
